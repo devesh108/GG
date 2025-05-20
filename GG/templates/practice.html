@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+    <script>
+        function Showmessage() {
+            // alert("Hi")
+            // document.write("Hi")
+            // console.log("Hi")
+            document.getElementById("result").innerHTML = "Hello"
+
+        }
+
+        function SumTwo() {
+            var1 = parseInt(document.getElementById("a").value);
+            var2 = parseInt(document.getElementById("b").value);
+            var sum = var1 + var2
+            alert(sum)
+
+        }
+
+        function SumFour() {
+            var1 = parseFloat(prompt("Enter 1 number:"));
+            var2 = parseFloat(prompt("Enter 2 number:"));
+            var3 = parseFloat(prompt("Enter 3 number:"));
+            var4 = parseFloat(prompt("Enter 4 number:"));
+            var sum = (var1 + var2 + var3 + var4);
+            console.log(sum)
+
+
+        }
+
+        function PosNeg() {
+            var1 = parseFloat(prompt("Enter 1 number:"))
+            if (var1 > 0) {
+                alert('Positive Number')
+            }
+            if (var1 < 0) {
+                alert('Negative Number')
+            }
+            else {
+                alert('')
+            }
+
+        }
+
+
+        function eveodd() {
+            var1 = parseFloat(prompt("Enter 1 number:"))
+            if (var1 % 2 == 0) {
+                alert('Even Number')
+            }
+            if (var1 % 2 != 0) {
+                alert('Odd Number')
+            }
+            else {
+                alert('')
+            }
+
+        }
+
+
+        function MonDay() {
+            var1 = parseInt(prompt("Enter 1 number:"))
+            if (var1 == 1) {
+                alert('31 Days')
+            }
+            else if (var1 == 2) {
+                alert('28 Days')
+            }
+            else if (var1 == 3) {
+                alert('31 Days')
+            }
+            else if (var1 == 4) {
+                alert('30 Days')
+            }
+            else if (var1 == 5) {
+                alert('31 Days')
+            }
+            else if (var1 == 6) {
+                alert('30 Days')
+            }
+            else if (var1 == 7) {
+                alert('31 Days')
+            }
+            else if (var1 == 8) {
+                alert('31 Days')
+            }
+            else if (var1 == 9) {
+                alert('30 Days')
+            }
+            else if (var1 == 10) {
+                alert('31 Days')
+            }
+            else if (var1 == 11) {
+                alert('30 Days')
+            }
+            else if (var1 == 12) {
+                alert('31 Days')
+            }
+            else {
+                alert('Invalid Input')
+            }
+
+        }
+
+        function switchcase() {
+            var1 = (prompt('Enter a character'))
+
+            // if (var1=='a' || var1=='e' ||  var1=='i' || var1=='o' || var1=='u'|| var1=='A' || var1=='E' ||  var1=='I' || var1=='O' || var1=='U')
+            // {
+            // alert('Vowel')
+            // }
+            // else
+            // {
+            //     alert('Consonant')
+            // }
+
+            switch (var1) {
+                case 'a':
+                case 'A':
+                    alert('Vowel')
+
+                case 'e':
+                case 'E':
+                    alert('Vowel')
+
+                case 'i':
+                case 'I':
+                    alert('Vowel')
+
+                case 'o':
+                case 'O':
+                    alert('Vowel')
+
+                case 'u':
+                case 'U':
+                    alert('Vowel')
+
+                default:
+                    alert('Cons')
+            }
+
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="result"></div>
+    <input type="submit" value="message print" onclick="Showmessage()">
+    <br>
+    <input type="text" name="" id="a">
+    <br>
+    <input type="text" name="" id="b">
+    <input type="submit" value="Sum two" onclick="SumTwo()">
+    <br>
+    <input type="submit" value="Sum four" onclick="SumFour()">
+    <br>
+    <input type="submit" value="PosNeg" onclick="PosNeg()">
+    <br><br>
+    <input type="submit" value="evenodd" , onclick="eveodd()">
+    <br><br>
+    <input type="submit" value="MonthDay" , onclick="MonDay()">
+    <br><br>
+    <input type="submit" , value="switch" , onclick="switchcase()">
+    <br><br>
+    <input type="submit" value="maxfour" onclick="maxfour()">
+</body>
+
+</html>
