@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'website_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'GG_data',          # Database name from pgAdmin
+        'USER': 'postgres',         # Replace with your PostgreSQL username if different
+        'PASSWORD': 'Deveshpandey@10',# Replace with your actual PostgreSQL password
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
