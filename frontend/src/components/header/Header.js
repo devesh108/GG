@@ -5,10 +5,11 @@ export default class Header extends Component {
   render() {
     return (
       <>
-        <Link to="/">Home</Link> |{" "}
-        <Link to="/about-us">About Us</Link> |{" "}
-        <Link to="/contact-us">Contact Us</Link>
+          <Link to="/">Home</Link> |{" "}
+          <Link to="/about-us">About Us</Link> |{" "}
+          <Link to="/contact-us">Contact Us</Link>
       </>
     );
   }
 }
+<div>hi</div>
