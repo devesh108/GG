@@ -18,8 +18,11 @@ function App() {
         <Route path="contact-us" element={<Contact />} />
       </Routes>
       <Footer />
+
     </BrowserRouter>
   );
 }
 
 export default App;
+
+
