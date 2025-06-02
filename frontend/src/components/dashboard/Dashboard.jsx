@@ -53,8 +53,8 @@ export const Dashboard = () => {
         <br /><br />
         <ul>
           {
-            store.map((item, index) => 
-              <li>{"My Id is:" + item.id+" "+item.title}</li>
+            store.map((item, index) =>
+              <li>{"My Id is:" + item.id + " " + item.title}</li>
             )
           }
         </ul>
