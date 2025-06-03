@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 
 export const Contact = () => {
@@ -9,18 +10,26 @@ export const Contact = () => {
     message: ""
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setState((prevState) => ({
-      ...prevState,
-      [name]: value
-    }));
+  const [msg, setMsg] = useState(""); // Added this to handle the message state
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setState((prevState) => ({ ...prevState, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
     console.log("Form submitted:", state);
-    // You can add further submission logic here
+    axios.post("http://localhost:3004/contact", state)
+      .then((res) => {
+        if (res.status === 201 || res.status === 200) {
+          setMsg("Message sent successfully");
+        }
+      })
+      .catch((err) => {
+        setMsg("Failed to send message");
+        console.error(err);
+      });
   };
 
   return (
@@ -87,6 +96,10 @@ export const Contact = () => {
         </div>
         <button type="submit" className="btn btn-success">Submit</button>
       </form>
+
+      {msg?(
+        <div className="alert alert-info mt-3">{msg}</div>
+      ):''}
     </div>
   );
 };
