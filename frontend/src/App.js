@@ -9,6 +9,7 @@ import { Contact } from './components/contact/Contact';
 import { Pagenotfound } from './components/pagenotfound/Pagenotfound'
 import { Contactlist } from './components/contactlist/Contactlist'
 import { Edit } from './components/edit/Edit';
+import { Useref } from './components/useref/Useref';
 
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="contactlist" element={<Contactlist />} />
         <Route path="edit/:id" element={<Edit />} />
+        <Route path="useref" element={<Useref />} />
         <Route path="*" element={<Pagenotfound />} />
       </Routes>
       <Footer />

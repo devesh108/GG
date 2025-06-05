@@ -48,9 +48,9 @@ export const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
+                  <Link className="dropdown-item" to="useref">
+                    Use Ref
+                  </Link>
                 </li>
                 <li>
                   <hr className="dropdown-divider" />
